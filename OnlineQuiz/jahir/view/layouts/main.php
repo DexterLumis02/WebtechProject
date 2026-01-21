@@ -26,5 +26,9 @@
 </main>
 <?php require BASE_PATH . '/view/layouts/footer.php'; ?>
 <script src="<?php echo base_url('public/assets/js/app.js'); ?>"></script>
+<script src="<?php echo base_url('public/assets/js/api.js'); ?>"></script>
+<script>
+    const BASE_URL = "<?php echo base_url(''); ?>";
+</script>
 </body>
 </html>

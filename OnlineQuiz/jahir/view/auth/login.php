@@ -7,15 +7,6 @@
             <?php endforeach; ?>
         </ul>
     <?php endif; ?>
-    <div class="auth-form">
-    <h2>Login</h2>
-    <?php if (!empty($errors)): ?>
-        <ul class="error-list">
-            <?php foreach ($errors as $error): ?>
-                <li><?php echo htmlspecialchars($error, ENT_QUOTES, 'UTF-8'); ?></li>
-            <?php endforeach; ?>
-        </ul>
-    <?php endif; ?>
     <form action="<?php echo base_url('login'); ?>" method="post" data-validate="true">
         <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($csrfToken, ENT_QUOTES, 'UTF-8'); ?>">
         <div class="form-group">

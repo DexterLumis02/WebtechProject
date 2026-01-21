@@ -159,14 +159,8 @@
                 <td>
                     <a href="<?php echo base_url('admin/exams/edit?id=' . (int)$exam->id); ?>">Edit</a>
                     <a href="<?php echo base_url('admin/exams/questions?exam_id=' . (int)$exam->id); ?>">Questions</a>
-                    <form action="<?php echo base_url('admin/exams'); ?>" method="post" class="inline-form">
-                        <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($csrfToken, ENT_QUOTES, 'UTF-8'); ?>">
-                        <input type="hidden" name="exam_id" value="<?php echo (int)$exam->id; ?>">
-                        <input type="hidden" name="action" value="delete">
-                        <button type="submit" class="btn small danger" onclick="return confirm('Delete this exam?');">
-                            Delete
-                        </button>
-                    </form>
+                    <button class="btn small primary" onclick="API.getExamDetails(<?php echo (int)$exam->id; ?>)">Details (AJAX)</button>
+                    <button class="btn small danger" onclick="API.deleteExam(<?php echo (int)$exam->id; ?>, this.closest('tr'))">Delete (AJAX)</button>
                 </td>
             </tr>
         <?php endforeach; ?>
