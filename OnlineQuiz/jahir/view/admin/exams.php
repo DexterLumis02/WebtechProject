@@ -1,3 +1,4 @@
+<div>
 <h2>Exams</h2>
 
 <?php if (!empty($errors)): ?>
@@ -171,4 +172,4 @@
     <?php endif; ?>
     </tbody>
 </table>
-
+    </div>
